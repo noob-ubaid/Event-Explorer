@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router";
 import { FaInternetExplorer } from "react-icons/fa";
 const Header = () => {
   return (
-    <div className="navbar py-6">
+    <div className="navbar py-6 mb-4">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -36,7 +36,7 @@ const Header = () => {
           </ul>
         </div>
         <div className="flex items-center gap-3 ml-4 md:ml-0">
-        <FaInternetExplorer size={27}  className="text-[#AD49E1]"/>
+        <FaInternetExplorer size={27}  className="purple"/>
         <p className="text-2xl font-semibold text-[#393E46]">EventFinder</p>
         </div>
       </div>
