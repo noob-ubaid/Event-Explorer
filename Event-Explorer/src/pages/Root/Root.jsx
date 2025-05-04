@@ -1,13 +1,15 @@
-import React from 'react';
-import { Outlet } from 'react-router';
+import React from "react";
+
+import Header from "../../components/Header/Header";
+import { Outlet } from "react-router";
 
 const Root = () => {
-    return (
-        <div>
-           root 
-           <Outlet></Outlet>
-        </div>
-    );
+  return (
+    <div className="max-w-[1600px] mx-auto">
+      <Header></Header>
+      <Outlet></Outlet>
+    </div>
+  );
 };
 
 export default Root;
