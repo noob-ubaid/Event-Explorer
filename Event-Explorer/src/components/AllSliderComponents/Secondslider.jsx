@@ -1,7 +1,7 @@
 import React from "react";
 const Secondslider = () => {
   return (
-    <div className="bg-[url('/secondslide.jpg')]  bg-center bg-cover md:h-[550px] h-[400px]  rounded-2xl ">
+    <div className="bg-[url('/secondslide.jpg')]  bg-center bg-cover md:h-[600px] h-[450px]  rounded-2xl ">
       <div className="flex items-center rounded-2xl h-full bg-[linear-gradient(180deg,_rgba(15,15,15,0)_-27.727%,_rgba(15,15,15,0.8)_100%)] justify-center">
         <div className="flex flex-col items-center justify-center gap-6">
           <p className=" lg:text-5xl md:text-4xl text-2xl font-bold text-white">

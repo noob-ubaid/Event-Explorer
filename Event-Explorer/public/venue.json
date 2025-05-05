@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Grand Convention Center",
+    "location": "Dhaka, Bangladesh",
+    "image": "https://readdy.ai/api/search-image?query=modern%20grand%20convention%20center%20with%20elegant%20architecture%2C%20spacious%20interior%20with%20high%20ceilings%2C%20professional%20venue%20photography%2C%20clean%20minimalist%20design%20with%20subtle%20lighting&width=400&height=300&seq=11&orientation=landscape",
+    "events": 24
+  },
+  {
+    "name": "Riverside Arena",
+    "location": "Chattogram, Bangladesh",
+    "image": "https://readdy.ai/api/search-image?query=large%20indoor%20sports%20arena%20with%20stadium%20seating%2C%20professional%20venue%20for%20concerts%20and%20sporting%20events%2C%20dramatic%20lighting%2C%20modern%20architecture%20with%20clean%20lines&width=400&height=300&seq=12&orientation=landscape",
+    "events": 18
+  },
+  {
+    "name": "Tech Innovation Hub",
+    "location": "Sylhet, Bangladesh",
+    "image": "https://readdy.ai/api/search-image?query=futuristic%20tech%20conference%20venue%20with%20glass%20architecture%2C%20modern%20meeting%20spaces%2C%20digital%20displays%2C%20professional%20venue%20photography%20with%20clean%20minimalist%20design&width=400&height=300&seq=13&orientation=landscape",
+    "events": 15
+  },
+  {
+    "name": "Cultural Arts Center",
+    "location": "Khulna, Bangladesh",
+    "image": "https://readdy.ai/api/search-image?query=elegant%20cultural%20arts%20center%20with%20exhibition%20spaces%2C%20modern%20architecture%2C%20artistic%20venue%20for%20performances%20and%20galleries%2C%20professional%20venue%20photography%20with%20clean%20design&width=400&height=300&seq=14&orientation=landscape",
+    "events": 21
+  }
+]

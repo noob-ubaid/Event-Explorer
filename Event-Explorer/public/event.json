@@ -1,63 +1,62 @@
 [
-    {
-      "id": 1,
-      "name": "Tech Conference 2025",
-      "category": "Tech",
-      "date": "May 15, 2025",
-      "location": "Gulistan, Dhaka",
-      "entryFee": "3999 ",
-      "thumbnail": "https://readdy.ai/api/search-image?query=modern%20tech%20conference%20with%20people%20networking%20in%20a%20stylish%20venue%20with%20blue%20lighting%2C%20professional%20atmosphere%2C%20minimalist%20design%2C%20clean%20background%20with%20subtle%20technology%20elements&width=600&height=400&seq=1&orientation=landscape",
-      "description": "Join us for the biggest tech conference of the year featuring keynotes from industry leaders opportunities."
-    },
-    {
-      "id": 2,
-      "name": "Art Exhibition: Modern Masters",
-      "category": "Art",
-      "date": "May 20, 2025",
-      "location": "Muhammadpur, Dhaka",
-      "entryFee": "6999 ",
-      "thumbnail": "https://readdy.ai/api/search-image?query=elegant%20art%20gallery%20exhibition%20with%20modern%20paintings%20displayed%20on%20white%20walls%2C%20sophisticated%20atmosphere%2C%20visitors%20admiring%20artwork%2C%20clean%20minimalist%20background%20with%20soft%20lighting&width=600&height=400&seq=2&orientation=landscape",
-      "description": "Experience the breathtaking works of contemporary artists pushing the boundaries of modern expression."
-    },
-    {
-      "id": 3,
-      "name": "Music Festival: Summer Vibes",
-      "category": "Music",
-      "date": "June 5-7, 2025",
-      "location": "Bashundara, Dhaka",
-      "entryFee": "3599 ",
-      "thumbnail": "https://readdy.ai/api/search-image?query=outdoor%20music%20festival%20with%20stage%20and%20colorful%20lights%2C%20crowd%20enjoying%20concert%2C%20summer%20evening%20atmosphere%2C%20professional%20photography%2C%20clean%20background%20with%20subtle%20lighting%20effects&width=600&height=400&seq=3&orientation=landscape",
-      "description": "Three days of non-stop music featuring top artists across multiple genres in a beautiful outdoor setting."
-    },
-    {
-      "id": 4,
-      "name": "Business Summit 2025",
-      "category": "Business",
-      "date": "June 12, 2025",
-      "location": "New Market, Dhaka",
-      "entryFee": "4999 ",
-      "thumbnail": "https://readdy.ai/api/search-image?query=professional%20business%20conference%20with%20executives%20in%20a%20modern%20convention%20center%2C%20presentation%20screens%2C%20networking%2C%20corporate%20atmosphere%2C%20clean%20minimalist%20background%20with%20subtle%20business%20elements&width=600&height=400&seq=4&orientation=landscape",
-      "description": "Connect with industry leaders and learn cutting-edge strategies to grow your business in the digital age."
-    },
-    {
-      "id": 5,
-      "name": "Food & Wine Festival",
-      "category": "Food",
-      "date": "July 8, 2025",
-      "location": "Neighborhoods, Dhaka",
-      "entryFee": "3299 ",
-      "thumbnail": "https://readdy.ai/api/search-image?query=gourmet%20food%20and%20wine%20festival%20with%20chef%20demonstrations%2C%20wine%20tasting%20stations%2C%20elegant%20food%20displays%2C%20culinary%20atmosphere%2C%20clean%20background%20with%20subtle%20food%20elements&width=600&height=400&seq=5&orientation=landscape",
-      "description": "Indulge in culinary delights from top chefs paired with exquisite wines from around the world."
-    },
-    {
-      "id": 6,
-      "name": "Sports Championship Finals",
-      "category": "Sports",
-      "date": "July 15, 2025",
-      "location": "Bondor, Sylhet",
-      "entryFee": "5999 ",
-      "thumbnail": "https://readdy.ai/api/search-image?query=exciting%20sports%20stadium%20filled%20with%20fans%2C%20championship%20game%20atmosphere%2C%20professional%20sports%20event%2C%20dynamic%20lighting%2C%20clean%20background%20with%20subtle%20sports%20elements&width=600&height=400&seq=6&orientation=landscape",
-      "description": "Witness the thrilling conclusion to this year's championship as top teams battle for the title."
-    }
-  ]
-  
+  {
+    "id": 1,
+    "name": "Tech Conference 2025",
+    "category": "Tech",
+    "date": "May 15, 2025",
+    "location": "Gulistan, Dhaka",
+    "entryFee": "3999 ",
+    "thumbnail": "https://readdy.ai/api/search-image?query=modern%20tech%20conference%20with%20people%20networking%20in%20a%20stylish%20venue%20with%20blue%20lighting%2C%20professional%20atmosphere%2C%20minimalist%20design%2C%20clean%20background%20with%20subtle%20technology%20elements&width=600&height=400&seq=1&orientation=landscape",
+    "description": "Join us for the biggest tech conference of the year, featuring keynote speeches from global industry leaders, interactive panel discussions, product showcases, and opportunities for networking with top tech professionals. Explore the latest advancements in AI, blockchain, cloud computing, and software development in a dynamic and inspiring atmosphere."
+  },
+  {
+    "id": 2,
+    "name": "Art Exhibition: Modern Masters",
+    "category": "Art",
+    "date": "May 20, 2025",
+    "location": "Muhammadpur, Dhaka",
+    "entryFee": "6999 ",
+    "thumbnail": "https://readdy.ai/api/search-image?query=elegant%20art%20gallery%20exhibition%20with%20modern%20paintings%20displayed%20on%20white%20walls%2C%20sophisticated%20atmosphere%2C%20visitors%20admiring%20artwork%2C%20clean%20minimalist%20background%20with%20soft%20lighting&width=600&height=400&seq=2&orientation=landscape",
+    "description": "Experience a curated selection of breathtaking works by contemporary masters who are redefining modern art. This exhibition features thought-provoking pieces that explore identity, culture, and innovation through diverse media and techniques. Perfect for art lovers, collectors, and curious minds eager to engage with visual storytelling at its finest."
+  },
+  {
+    "id": 3,
+    "name": "Music Festival: Summer Vibes",
+    "category": "Music",
+    "date": "June 5-7, 2025",
+    "location": "Bashundara, Dhaka",
+    "entryFee": "3599 ",
+    "thumbnail": "https://readdy.ai/api/search-image?query=outdoor%20music%20festival%20with%20stage%20and%20colorful%20lights%2C%20crowd%20enjoying%20concert%2C%20summer%20evening%20atmosphere%2C%20professional%20photography%2C%20clean%20background%20with%20subtle%20lighting%20effects&width=600&height=400&seq=3&orientation=landscape",
+    "description": "Celebrate summer with three incredible days of live music, sunshine, and good vibes. Enjoy performances from top international and local artists across genres like pop, rock, EDM, and indie. With food trucks, art installations, and chill-out zones, it's more than a festival—it's an unforgettable experience for music lovers."
+  },
+  {
+    "id": 4,
+    "name": "Business Summit 2025",
+    "category": "Business",
+    "date": "June 12, 2025",
+    "location": "New Market, Dhaka",
+    "entryFee": "4999 ",
+    "thumbnail": "https://readdy.ai/api/search-image?query=professional%20business%20conference%20with%20executives%20in%20a%20modern%20convention%20center%2C%20presentation%20screens%2C%20networking%2C%20corporate%20atmosphere%2C%20clean%20minimalist%20background%20with%20subtle%20business%20elements&width=600&height=400&seq=4&orientation=landscape",
+    "description": "Engage with visionary entrepreneurs, CEOs, and investors at the premier business summit of the year. Discover breakthrough strategies in marketing, leadership, finance, and digital transformation. Attend workshops, pitch sessions, and networking events designed to help you expand your business horizons and connect with the most influential minds in the industry."
+  },
+  {
+    "id": 5,
+    "name": "Food & Wine Festival",
+    "category": "Food",
+    "date": "July 8, 2025",
+    "location": "Neighborhoods, Dhaka",
+    "entryFee": "3299 ",
+    "thumbnail": "https://readdy.ai/api/search-image?query=gourmet%20food%20and%20wine%20festival%20with%20chef%20demonstrations%2C%20wine%20tasting%20stations%2C%20elegant%20food%20displays%2C%20culinary%20atmosphere%2C%20clean%20background%20with%20subtle%20food%20elements&width=600&height=400&seq=5&orientation=landscape",
+    "description": "Savor gourmet dishes from award-winning chefs while sampling an exclusive selection of wines from around the world. This festival is a paradise for food lovers, offering live cooking demos, masterclasses, and tasting sessions. Whether you're a culinary expert or a casual foodie, you'll leave with a full stomach and inspired taste buds."
+  },
+  {
+    "id": 6,
+    "name": "Sports Championship Finals",
+    "category": "Sports",
+    "date": "July 15, 2025",
+    "location": "Bondor, Sylhet",
+    "entryFee": "5999 ",
+    "thumbnail": "https://readdy.ai/api/search-image?query=exciting%20sports%20stadium%20filled%20with%20fans%2C%20championship%20game%20atmosphere%2C%20professional%20sports%20event%2C%20dynamic%20lighting%2C%20clean%20background%20with%20subtle%20sports%20elements&width=600&height=400&seq=6&orientation=landscape",
+    "description": "Get ready for an adrenaline-pumping finale as the top teams clash in a battle for ultimate victory. The Sports Championship Finals promise high-energy action, dramatic moments, and unforgettable excitement. Bring your friends, wear your team colors, and be part of the roaring crowd in a stadium alive with passion and spirit."
+  }
+]
