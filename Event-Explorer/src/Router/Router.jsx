@@ -4,6 +4,8 @@ import Home from "../pages/Home/Home";
 import Profile from "../pages/Profile/Profile";
 import Login from "../pages/Login/Login";
 import Register from "../pages/register/Register";
+import Details from "../pages/Details/Details";
+import PrivateRoute from "../components/context/PrivateRoute";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -16,7 +18,7 @@ export const router = createBrowserRouter([
         },
         {
           path : '/profile',
-          Component : Profile
+          element : <PrivateRoute><Profile></Profile></PrivateRoute>
         }
     ]
   },
@@ -27,6 +29,11 @@ export const router = createBrowserRouter([
   {
     path : '/register',
     Component : Register
+  },
+  {
+    path : '/details/:id',
+    element: <PrivateRoute><Details></Details></PrivateRoute>,
+    loader : () => fetch('../event.json')
   }
   
 ]);

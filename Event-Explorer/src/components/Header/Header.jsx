@@ -1,7 +1,15 @@
-import React from "react";
+import React, { use } from "react";
 import { Link, NavLink } from "react-router";
 import { FaInternetExplorer } from "react-icons/fa";
+import { AuthContext } from "../context/AuthProvider";
+import { toast } from "react-toastify";
 const Header = () => {
+  const {user , logOut} = use(AuthContext)
+  const handleLogOut = () => {
+    logOut()
+    .then(() => toast.warning('Successfully Logged out!'))
+    .then((e) =>console.log(e))
+  }
   return (
     <div className="navbar py-6 mb-4">
       <div className="navbar-start">
@@ -51,7 +59,10 @@ const Header = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <Link to='/login' className=" bg-[#AD49E1] text-white font-medium md:px-8 md:py-2.5 px-4 py-2  rounded">Login</Link>
+        {
+          user ? <button onClick={handleLogOut} className=" bg-[#AD49E1] text-white font-medium md:px-8 md:py-2.5 px-4 py-2  rounded">Logout</button> : <Link to='/login' className=" bg-[#AD49E1] text-white font-medium md:px-8 md:py-2.5 px-4 py-2  rounded">Login</Link>
+        }
+        
       </div>
     </div>
   );

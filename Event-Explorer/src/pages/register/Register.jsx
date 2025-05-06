@@ -1,49 +1,105 @@
-import React from 'react';
-import Header from '../../components/Header/Header';
-import { Link } from 'react-router';
-
+import React, { use, useState } from "react";
+import Header from "../../components/Header/Header";
+import { Link } from "react-router";
+import { AuthContext } from "../../components/context/AuthProvider";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
+import {  toast } from 'react-toastify';
 const Register = () => {
-    return (
-        <div className="max-w-[1600px] mx-auto">
-        <Header></Header>
-        <div className="flex items-center justify-center ">
-          <div className="card-body max-w-md border border-[#0F0F0F26] rounded-md">
-            <h2 className="text-2xl font-semibold mt-4 mb-2 border-b border-b-[#0F0F0F26] pb-4 text-center">
-              Register Your Account
-            </h2>
-            <form className="">
-                {/* Name  */}
-              <label className="label text-[14px] font-medium mb-1">Name</label>
-              <input type="text" className="input w-full" placeholder="Enter your name" />
-                {/* photo */}
-              <label className="label text-[14px] mt-2 font-medium mb-1">Photo Url</label>
-              <input type="text" className="input w-full" placeholder="Photo Url" />
-                {/* email  */}
-              <label className="label text-[14px] mt-2 font-medium mb-1">Email</label>
-              <input type="email" className="input w-full" placeholder="Email" />
-              {/* password  */}
-              <label className="label text-[14px] mt-2 font-medium mb-1">
-                Password
-              </label>
+  const { register , google , setUser} = use(AuthContext);
+  const [show , setShow] = useState(false)
+  const handleWatch = () => {
+    setShow(!show)
+  }
+  const handleRegister = (e) => {
+    e.preventDefault();
+    const name = e.target.name.value;
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+    const photo = e.target.photo.value;
+    register(email, password)
+      .then((result) => {
+        const user = result.user
+        toast.success('Successfully logged in')
+        setUser(user)
+      })
+      .then((error) => console.log(error));
+  };
+  const handleGoogle =() => {
+    google()
+    .then(result => console.log(result))
+    .then(error => console.log(error))
+  }
+  return (
+    <div className="max-w-[1600px] mx-auto">
+      <Header></Header>
+      <div className="flex items-center justify-center ">
+        <div className="card-body max-w-md border border-[#0F0F0F26] rounded-md">
+          <h2 className="text-2xl font-semibold mt-4 mb-2 border-b border-b-[#0F0F0F26] pb-4 text-center">
+            Register Your Account
+          </h2>
+          <form onSubmit={handleRegister} className="">
+            {/* Name  */}
+            <label className="label text-[14px] font-medium mb-1">Name</label>
+            <input
+              type="text"
+              name="name"
+              className="input w-full"
+              placeholder="Enter your name"
+            />
+            {/* photo */}
+            <label className="label text-[14px] mt-2 font-medium mb-1">
+              Photo Url
+            </label>
+            <input
+              type="text"
+              name="photo"
+              className="input w-full"
+              placeholder="Photo Url"
+            />
+            {/* email  */}
+            <label className="label text-[14px] mt-2 font-medium mb-1">
+              Email
+            </label>
+            <input
+              type="email"
+              name="email"
+              className="input w-full"
+              placeholder="Email"
+            />
+            {/* password  */}
+            <label className="label text-[14px] mt-2 font-medium mb-1">
+              Password
+            </label>
+            <div className="relative">
               <input
-                type="password"
+              pattern="^(?=.*[a-z])(?=.*[A-Z]).{6,}$"
+                type={!show ? 'password' : 'text'}
+                name="password"
                 className="input w-full"
                 placeholder="Password"
               />
-              <button className="btn btn-neutral w-full mt-4">Register</button>
-              <p className="text-center text-[14px] mt-2 font-medium">
-                Already have an account .{" "}
-                <Link to={"/login"} className="text-red-400 underline">
-                  Login
-                </Link>
-              </p>
-              <div className="flex gap-4 items-center">
-                <div className="border-b w-[45%] border-b-[#0F0F0F26]"></div>
-                <p className="w-[5%] font-medium text-base">Or</p>
-                <div className="border-b w-[45%] border-b-[#0F0F0F26]"></div>
-              </div>
-              <div>
-              <button className="btn bg-white w-full mt-2 text-black border-[#e5e5e5]">
+              <button onClick={handleWatch} className="cursor-pointer">
+                {show ? (
+                  <FaEyeSlash size={20} className="absolute right-4 top-2.5" />
+                ) : (
+                  <FaEye size={20} className="absolute right-4 top-2.5" />
+                )}
+              </button>
+            </div>
+            <button className="btn btn-neutral w-full mt-4">Register</button>
+            <p className="text-center text-[14px] mt-2 font-medium">
+              Already have an account .{" "}
+              <Link to={"/login"} className="text-red-400 underline">
+                Login
+              </Link>
+            </p>
+            <div className="flex gap-4 items-center">
+              <div className="border-b w-[45%] border-b-[#0F0F0F26]"></div>
+              <p className="w-[5%] font-medium text-base">Or</p>
+              <div className="border-b w-[45%] border-b-[#0F0F0F26]"></div>
+            </div>
+            <div>
+              <button onClick={handleGoogle} className="btn bg-white w-full mt-2 text-black border-[#e5e5e5]">
                 <svg
                   aria-label="Google logo"
                   width="16"
@@ -73,12 +129,12 @@ const Register = () => {
                 </svg>
                 Login with Google
               </button>
-              </div>
-            </form>
-          </div>
+            </div>
+          </form>
         </div>
       </div>
-    );
+    </div>
+  );
 };
 
 export default Register;
