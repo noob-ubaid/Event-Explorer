@@ -14,7 +14,7 @@ const Event = ({ event }) => {
     description,
   } = event;
   useEffect(() => {
-    AOS.init({ duration: 700, delay: 50 });
+    AOS.init({ duration: 700, delay: 50 , once : true});
   }, []);
   const handleViewMore = () => {
     console.log(231)
