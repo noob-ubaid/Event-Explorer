@@ -7,7 +7,6 @@ const Details = () => {
     const data = useLoaderData()
     const {id} = useParams()
     const singleEvent = data.find(card => card.id == id)
-    console.log(singleEvent)
     return (
         <div className='max-w-[1600px] mx-auto'>
             <Header></Header>

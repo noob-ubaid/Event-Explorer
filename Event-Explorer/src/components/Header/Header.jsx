@@ -8,7 +8,7 @@ const Header = () => {
   const handleLogOut = () => {
     logOut()
     .then(() => toast.warning('Successfully Logged out!'))
-    .then((e) =>console.log(e))
+    .then(() =>{})
   }
   return (
     <div className="navbar py-6 mb-4">
@@ -58,7 +58,10 @@ const Header = () => {
           </NavLink>
         </ul>
       </div>
-      <div className="navbar-end">
+      <div className="navbar-end flex items-center gap-6">
+        {
+          user && <img className="size-12 rounded-full" src={user.photoURL} alt="" />
+        }
         {
           user ? <button onClick={handleLogOut} className=" bg-[#AD49E1] text-white font-medium md:px-8 md:py-2.5 px-4 py-2  rounded">Logout</button> : <Link to='/login' className=" bg-[#AD49E1] text-white font-medium md:px-8 md:py-2.5 px-4 py-2  rounded">Login</Link>
         }

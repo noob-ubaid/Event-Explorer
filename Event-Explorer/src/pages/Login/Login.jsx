@@ -1,6 +1,6 @@
 import React, { use, useState } from "react";
 import Header from "../../components/Header/Header";
-import { Link } from "react-router";
+import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../../components/context/AuthProvider";
 import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa6";
@@ -8,18 +8,27 @@ import { toast } from "react-toastify";
 const Login = () => {
   const { logIn, google } = use(AuthContext);
   const [show, setShow] = useState(false);
+  const location = useLocation()
+  const navigate = useNavigate()
   const handleLogin = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
     logIn(email, password)
-      .then((result) => toast.success("Successfully logged in !"))
-      .then((error) => console.log(error));
+      .then((result) => {
+        const user = result.user
+        toast.success('Successfully logged in')
+        navigate(`${location.state ? location.state : '/'}`)
+      })
+      .then(() => {});
   };
   const handleGoogle = () => {
     google()
-      .then((result) => console.log(423))
-      .then((error) => console.log(error));
+      .then((result) => {
+        navigate(`${location.state ? location.state : '/'}`)
+        toast.success('Successfully logged in')
+      })
+      .then(() => {});
   };
   const handleWatch = () => {
     setShow(!show);

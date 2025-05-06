@@ -5,11 +5,11 @@ const DetailsCard = ({ singleEvent }) => {
   const { name, category, date, location, entryFee, thumbnail, description } =
     singleEvent;
   return (
-    <div className="flex items-stretch px-4 md:px-0 mt-10 gap-6 md:gap-12 flex-col md:flex-row">
-      <div className="w-full md:w-[50%]">
-        <img className="rounded-md " src={thumbnail} alt="" />
+    <div className="flex items-stretch px-4  md:border border-[#14141426] md:p-8 rounded-md mt-10 gap-6 md:gap-12 flex-col md:flex-row">
+      <div className="w-full md:w-[30%]">
+        <img className="rounded-md w-full object-cover h-[350px]" src={thumbnail} alt="" />
       </div>
-      <div className=" w-full md:w-[50%] border border-[#14141426] rounded-md p-8">
+      <div className=" w-full md:w-[70%] my-8 md:my-0">
         <h4 className="text-2xl lg:text-4xl text-[#141414] md:text-3xl font-medium md:font-semibold">
           Title : {name}
         </h4>

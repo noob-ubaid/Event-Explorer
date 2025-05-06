@@ -1,15 +1,16 @@
 import React, { use, useState } from "react";
 import Header from "../../components/Header/Header";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import { AuthContext } from "../../components/context/AuthProvider";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-import {  toast } from 'react-toastify';
+import { toast } from "react-toastify";
 const Register = () => {
-  const { register , google , setUser} = use(AuthContext);
-  const [show , setShow] = useState(false)
+  const { register, google, setUser, updateUser } = use(AuthContext);
+  const [show, setShow] = useState(false);
+  const navigate = useNavigate()
   const handleWatch = () => {
-    setShow(!show)
-  }
+    setShow(!show);
+  };
   const handleRegister = (e) => {
     e.preventDefault();
     const name = e.target.name.value;
@@ -18,17 +19,26 @@ const Register = () => {
     const photo = e.target.photo.value;
     register(email, password)
       .then((result) => {
-        const user = result.user
-        toast.success('Successfully logged in')
-        setUser(user)
+        const user = result.user;
+        updateUser({ displayName: name, photoURL: photo })
+        .then(() => {
+          toast.success("Successfully logged in");
+          setUser({...user,displayName: name, photoURL: photo });
+          navigate('/')
+        }).then(error => {
+          setUser(user)
+        })
       })
-      .then((error) => console.log(error));
+      .then(() => {});
   };
-  const handleGoogle =() => {
+  const handleGoogle = () => {
     google()
-    .then(result => console.log(result))
-    .then(error => console.log(error))
-  }
+      .then((result) => {
+        toast.success("Successfully logged in");
+        navigate('/')
+      })
+      .then(() => {});
+  };
   return (
     <div className="max-w-[1600px] mx-auto">
       <Header></Header>
@@ -72,8 +82,8 @@ const Register = () => {
             </label>
             <div className="relative">
               <input
-              pattern="^(?=.*[a-z])(?=.*[A-Z]).{6,}$"
-                type={!show ? 'password' : 'text'}
+                pattern="^(?=.*[a-z])(?=.*[A-Z]).{6,}$"
+                type={!show ? "password" : "text"}
                 name="password"
                 className="input w-full"
                 placeholder="Password"
@@ -99,7 +109,10 @@ const Register = () => {
               <div className="border-b w-[45%] border-b-[#0F0F0F26]"></div>
             </div>
             <div>
-              <button onClick={handleGoogle} className="btn bg-white w-full mt-2 text-black border-[#e5e5e5]">
+              <button
+                onClick={handleGoogle}
+                className="btn bg-white w-full mt-2 text-black border-[#e5e5e5]"
+              >
                 <svg
                   aria-label="Google logo"
                   width="16"

@@ -16,9 +16,6 @@ const Event = ({ event }) => {
   useEffect(() => {
     AOS.init({ duration: 700, delay: 50 , once : true});
   }, []);
-  const handleViewMore = () => {
-    console.log(231)
-  }
   return (
     <div
       data-aos="fade-down-right"
@@ -74,7 +71,7 @@ const Event = ({ event }) => {
           </div>
 
           <div className="mt-3">
-            <Link to={`/details/${id}`} onClick={handleViewMore} className="relative inline-flex items-center w-full justify-center px-6 py-3 rounded-xl bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white font-semibold shadow-md shadow-blue-600/40 hover:shadow-purple-500/60 transition-all duration-300 overflow-hidden group">
+            <Link to={`/details/${id}`}  className="relative inline-flex items-center w-full justify-center px-6 py-3 rounded-xl bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white font-semibold shadow-md shadow-blue-600/40 hover:shadow-purple-500/60 transition-all duration-300 overflow-hidden group">
               <span className="absolute inset-0 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 opacity-20 blur-lg group-hover:opacity-40 transition duration-500 rounded-xl animate-pulse"></span>
               <span className="relative z-10 text-sm tracking-wide uppercase">
                 View More
