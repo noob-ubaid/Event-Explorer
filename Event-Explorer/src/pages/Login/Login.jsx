@@ -1,4 +1,4 @@
-import React, { use, useState } from "react";
+import React, { use, useRef, useState } from "react";
 import Header from "../../components/Header/Header";
 import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../../components/context/AuthProvider";
@@ -6,10 +6,11 @@ import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa6";
 import { toast } from "react-toastify";
 const Login = () => {
-  const { logIn, google } = use(AuthContext);
+  const { logIn, google ,user ,forgetPassword} = use(AuthContext);
   const [show, setShow] = useState(false);
   const location = useLocation()
   const navigate = useNavigate()
+  const emailRef = useRef();
   const handleLogin = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
@@ -22,6 +23,19 @@ const Login = () => {
       })
       .then(() => {});
   };
+  const forget = (e) => {
+  // const email = e.target.parentElement.parentElement.childElement
+  
+  const email = emailRef.current.value;
+    forgetPassword(email)
+    .then(() => {
+      toast.success('Check your email')
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+    });
+  }
   const handleGoogle = () => {
     google()
       .then((result) => {
@@ -48,6 +62,7 @@ const Login = () => {
               name="email"
               className="input w-full"
               placeholder="Email"
+              ref={emailRef}
             />
             <label className="label text-[14px] font-medium mb-1">
               Password
@@ -69,7 +84,7 @@ const Login = () => {
               </button>
             </div>
             <div className="mt-2">
-              <a className="link link-hover ">Forgot password?</a>
+              <a onClick={forget} className="link link-hover ">Forgot password?</a>
             </div>
             <button className="btn btn-neutral mt-4 w-full">Login</button>
             <p className="text-center text-[14px] mt-2 font-medium">

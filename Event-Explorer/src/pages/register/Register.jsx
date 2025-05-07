@@ -88,7 +88,7 @@ const Register = () => {
                 className="input w-full"
                 placeholder="Password"
               />
-              <button onClick={handleWatch} className="cursor-pointer">
+              <button type="button" onClick={handleWatch} className="cursor-pointer">
                 {show ? (
                   <FaEyeSlash size={20} className="absolute right-4 top-2.5" />
                 ) : (
@@ -96,7 +96,7 @@ const Register = () => {
                 )}
               </button>
             </div>
-            <button className="btn btn-neutral w-full mt-4">Register</button>
+            <button type="submit" className="btn btn-neutral w-full mt-4">Register</button>
             <p className="text-center text-[14px] mt-2 font-medium">
               Already have an account .{" "}
               <Link to={"/login"} className="text-red-400 underline">

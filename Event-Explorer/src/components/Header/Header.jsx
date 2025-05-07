@@ -3,13 +3,15 @@ import { Link, NavLink } from "react-router";
 import { FaInternetExplorer } from "react-icons/fa";
 import { AuthContext } from "../context/AuthProvider";
 import { toast } from "react-toastify";
+import Button from '@mui/material/Button';
+import Tooltip from '@mui/material/Tooltip';
 const Header = () => {
-  const {user , logOut} = use(AuthContext)
+  const { user, logOut } = use(AuthContext);
   const handleLogOut = () => {
     logOut()
-    .then(() => toast.warning('Successfully Logged out!'))
-    .then(() =>{})
-  }
+      .then(() => toast.warning("Successfully Logged out!"))
+      .then(() => {});
+  };
   return (
     <div className="navbar py-6 mb-4">
       <div className="navbar-start">
@@ -35,17 +37,23 @@ const Header = () => {
             tabIndex={0}
             className="menu menu-sm dropdown-content flex flex-col items-center justify-center gap-6 bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
           >
-           <NavLink className="font-medium w-fit text-lg text-[#393E46]" to="/">
-            Home
-          </NavLink>
-          <NavLink className="font-medium text-lg text-[#393E46]" to="/profile">
-            My Profile
-          </NavLink>
+            <NavLink
+              className="font-medium w-fit text-lg text-[#393E46]"
+              to="/"
+            >
+              Home
+            </NavLink>
+            <NavLink
+              className="font-medium text-lg text-[#393E46]"
+              to="/profile"
+            >
+              My Profile
+            </NavLink>
           </ul>
         </div>
         <div className="flex items-center gap-3 ml-4 md:ml-0">
-        <FaInternetExplorer size={27}  className="purple"/>
-        <p className="text-2xl font-semibold text-[#393E46]">EventFinder</p>
+          <FaInternetExplorer size={27} className="purple" />
+          <p className="text-2xl font-semibold text-[#393E46]">EventFinder</p>
         </div>
       </div>
       <div className="navbar-center hidden lg:flex">
@@ -59,13 +67,27 @@ const Header = () => {
         </ul>
       </div>
       <div className="navbar-end flex items-center gap-6">
-        {
-          user && <img className="size-12 rounded-full" src={user.photoURL} alt="" />
-        }
-        {
-          user ? <button onClick={handleLogOut} className=" bg-[#AD49E1] text-white font-medium md:px-8 md:py-2.5 px-4 py-2  rounded">Logout</button> : <Link to='/login' className=" bg-[#AD49E1] text-white font-medium md:px-8 md:py-2.5 px-4 py-2  rounded">Login</Link>
-        }
+      <Tooltip title={user && user.displayName} arrow>
+      <Button>{user && (
+          <img className="size-12 rounded-full" src={user.photoURL} alt="" />
+        )}</Button>
+    </Tooltip>
         
+        {user ? (
+          <button
+            onClick={handleLogOut}
+            className=" bg-[#AD49E1] text-white font-medium md:px-8 md:py-2.5 px-4 py-2  rounded"
+          >
+            Logout
+          </button>
+        ) : (
+          <Link
+            to="/login"
+            className=" bg-[#AD49E1] text-white font-medium md:px-8 md:py-2.5 px-4 py-2  rounded"
+          >
+            Login
+          </Link>
+        )}
       </div>
     </div>
   );
