@@ -58,5 +58,65 @@
     "entryFee": "5999 ",
     "thumbnail": "https://readdy.ai/api/search-image?query=exciting%20sports%20stadium%20filled%20with%20fans%2C%20championship%20game%20atmosphere%2C%20professional%20sports%20event%2C%20dynamic%20lighting%2C%20clean%20background%20with%20subtle%20sports%20elements&width=600&height=400&seq=6&orientation=landscape",
     "description": "Get ready for an adrenaline-pumping finale as the top teams clash in a battle for ultimate victory. The Sports Championship Finals promise high-energy action, dramatic moments, and unforgettable excitement. Bring your friends, wear your team colors, and be part of the roaring crowd in a stadium alive with passion and spirit."
+  },
+   {
+    "id": 7,
+    "name": "Startup Pitch Night",
+    "category": "Business",
+    "date": "August 10, 2025",
+    "location": "Banani, Dhaka",
+    "entryFee": "1999",
+    "thumbnail": "https://images.unsplash.com/photo-1643759543584-fb6f448d42d4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGV2ZW50c3xlbnwwfHwwfHx8MA%3D%3D",
+    "description": "A thrilling evening where ambitious startups pitch their ideas exploration through the vibrant to a panel of experienced investors. Connect with founders, hear innovative business concepts, and witness the next generation of Bangladeshi entrepreneurs in action.Historic beauty with your lens in this immersive creative event."
+  },
+  {
+    "id": 8,
+    "name": "Photography Walk: Old Dhaka",
+    "category": "Photography",
+    "date": "August 22, 2025",
+    "location": "Lalbagh, Dhaka",
+    "entryFee": "1499",
+    "thumbnail": "https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGV2ZW50c3xlbnwwfHwwfHx8MA%3D%3D",
+    "description": "Join fellow photography enthusiasts for a guided exploration through the vibrant alleys of Old Dhaka. Capture unique architecture, daily life, and historic beauty with your lens in this immersive creative event."
+  },
+  {
+    "id": 9,
+    "name": "Film Screening: Indie Reels",
+    "category": "Film",
+    "date": "September 3, 2025",
+    "location": "Uttara, Dhaka",
+    "entryFee": "2499",
+    "thumbnail": "https://images.unsplash.com/photo-1522158637959-30385a09e0da?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8ZXZlbnR8ZW58MHx8MHx8fDA%3D",
+    "description": "Discover a lineup of bold and original short films by emerging Bangladeshi directors. Indie Reels is a celebration of visual storytelling, pushing boundaries and sparking meaningful conversations through cinema."
+  },
+  {
+    "id": 10,
+    "name": "Wellness & Yoga Retreat",
+    "category": "Health",
+    "date": "September 15, 2025",
+    "location": "Gazipur, Dhaka",
+    "entryFee": "4599",
+    "thumbnail": "https://images.unsplash.com/photo-1527529482837-4698179dc6ce?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGV2ZW50fGVufDB8fDB8fHww",
+    "description": "Rejuvenate your mind and body in a serene natural setting. This day-long retreat includes guided yoga sessions, meditation, nutrition talks, and holistic wellness practices. Suitable for all levels."
+  },
+   {
+    "id": 11,
+    "name": "Fashion Forward Runway",
+    "category": "Fashion",
+    "date": "October 5, 2025",
+    "location": "Dhanmondi, Dhaka",
+    "entryFee": "5499",
+    "thumbnail": "https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGV2ZW50fGVufDB8fDB8fHww",
+    "description": "Step into the world of fashion with dazzling designs from emerging and established Bangladeshi designers. Featuring live runway shows, trend talks, and networking with fashion insiders—this event is a must-attend for style enthusiasts."
+  },
+  {
+    "id": 12,
+    "name": " Words & Voices",
+    "category": "Literature",
+    "date": "October 18, 2025",
+    "location": "Shahbagh, Dhaka",
+    "entryFee": "999",
+    "thumbnail": "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGV2ZW50fGVufDB8fDB8fHww",
+    "description": "Celebrate the power of storytelling with poetry readings, author talks, and spoken word performances. Words & Voices brings together writers, readers, and thinkers for an evening of creative exchange and literary connection."
   }
 ]

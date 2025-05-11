@@ -1,0 +1,33 @@
+[
+
+  {
+    "id": 1,
+    "question": " What is Event Explorer?",
+    "answer": "Event Explorer is a web platform that helps users discover and explore upcoming local events such as workshops, conferences, exhibitions, concerts, and more."
+  },
+  {
+    "id": 2,
+    "question": "How can I find events happening this week?",
+    "answer": "Just scroll down to the “Upcoming Events” section on the home page. Events are sorted by date, so you’ll easily see what’s happening soon."
+  },
+  {
+    "id": 3,
+    "question": "Can I filter events by category like Tech, Art, or Sports?",
+    "answer": "Currently, events are grouped and displayed by category in the Upcoming Events section. You can browse through different categories visually. A filter feature may be added in future updates."
+  },
+  {
+    "id": 4,
+    "question": "What happens when I click on “View More” in an event card?",
+    "answer": "You’ll be taken to the event’s details page, where you can see full information and reserve your seat. This page is protected, so you'll need to be logged in."
+  },
+  {
+    "id": 5,
+    "question": "How does the seat reservation form work?",
+    "answer": "Just enter your name and email, then click “Reserve Seat.” You’ll get a success message."
+  },
+  {
+    "id": 5,
+    "question": "Can i host an event?",
+    "answer": "Yes, you can host an event by clicking on the Host Event on the menu bar."
+  }
+]

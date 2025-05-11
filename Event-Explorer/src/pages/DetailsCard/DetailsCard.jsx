@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router";
 
-const DetailsCard = ({ singleEvent }) => {
+const DetailsCard = ({ card }) => {
   const { name, category, date, location, entryFee, thumbnail, description } =
-    singleEvent;
+    card;
   return (
     <div className="flex items-stretch px-4  md:border border-[#14141426] md:p-8 rounded-md mt-10 gap-6 md:gap-12 flex-col md:flex-row">
       <div className="w-full md:w-[30%]">

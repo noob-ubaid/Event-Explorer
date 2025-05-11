@@ -1,4 +1,4 @@
-import React, { use, useState } from "react";
+import React, { use, useEffect, useState } from "react";
 import Header from "../../components/Header/Header";
 import { Link, useNavigate } from "react-router";
 import { AuthContext } from "../../components/context/AuthProvider";
@@ -39,6 +39,9 @@ const Register = () => {
       })
       .then(() => {});
   };
+  useEffect(() => {
+      document.title = 'Register - Page'
+    } , [])
   return (
     <div className="max-w-[1600px] mx-auto">
       <Header></Header>

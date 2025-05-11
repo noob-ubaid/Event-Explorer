@@ -9,8 +9,8 @@ const ReserveSeat = () => {
   return (
     <div className="px-4 py-12 md:py-16 mt-10 md:px-0 bg-black">
       
-      <form onSubmit={handleSubmit} className="flex flex-col items-center justify-center">
-        <div className="w-full md:max-w-sm ">
+      <form onSubmit={handleSubmit} className="flex flex-col  items-center justify-center">
+        <div className="w-full border border-gray-500 p-8 rounded-md md:max-w-sm ">
         <p className="text-2xl md:text-3xl pb-4 border-b border-b-gray-500 text-white text-center lg:text-4xl font-semibold mt-6 md:mt-12">
         Reserve a seat
       </p>
@@ -32,7 +32,7 @@ const ReserveSeat = () => {
             className="input w-full"
             placeholder="Email"
           />
-          <button className="px-4 py-2 w-full md:px-6 md:py-3 rounded-md font-medium mt-6 text-white bg-[#AD49E1]" type="submit">Reserve</button>
+          <button className="px-4 py-2 w-full md:px-6 md:py-3 rounded-md font-medium mt-6 text-white bg-[#AD49E1]" type="submit">Reserve Seat</button>
         </div>
       </form>
     </div>

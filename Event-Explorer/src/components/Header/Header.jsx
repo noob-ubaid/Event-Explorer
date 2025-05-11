@@ -3,8 +3,8 @@ import { Link, NavLink } from "react-router";
 import { FaInternetExplorer } from "react-icons/fa";
 import { AuthContext } from "../context/AuthProvider";
 import { toast } from "react-toastify";
-import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
+import Button from "@mui/material/Button";
+import Tooltip from "@mui/material/Tooltip";
 const Header = () => {
   const { user, logOut } = use(AuthContext);
   const handleLogOut = () => {
@@ -49,6 +49,9 @@ const Header = () => {
             >
               My Profile
             </NavLink>
+            <NavLink className="font-medium text-lg text-[#393E46]" to="/host">
+              Host Event
+            </NavLink>
           </ul>
         </div>
         <div className="flex items-center gap-3 ml-4 md:ml-0">
@@ -57,22 +60,31 @@ const Header = () => {
         </div>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu flex items-center gap-6 menu-horizontal px-1">
+        <ul className="menu flex items-center gap-8 menu-horizontal px-1">
           <NavLink className="font-medium text-lg text-[#393E46]" to="/">
             Home
           </NavLink>
           <NavLink className="font-medium text-lg text-[#393E46]" to="/profile">
             My Profile
           </NavLink>
+          <NavLink className="font-medium text-lg text-[#393E46]" to="/host">
+            Host Event
+          </NavLink>
         </ul>
       </div>
-      <div className="navbar-end flex items-center gap-6">
-      <Tooltip title={user && user.displayName} arrow>
-      <Button>{user && (
-          <img className="size-12 rounded-full" src={user.photoURL} alt="" />
-        )}</Button>
-    </Tooltip>
-        
+      <div className="navbar-end flex items-center gap-4 md:gap-6">
+        <Tooltip title={user && user.displayName} arrow>
+          <Button>
+            {user && (
+              <img
+                className="md:size-12 size-10 rounded-full"
+                src={user.photoURL}
+                alt=""
+              />
+            )}
+          </Button>
+        </Tooltip>
+
         {user ? (
           <button
             onClick={handleLogOut}

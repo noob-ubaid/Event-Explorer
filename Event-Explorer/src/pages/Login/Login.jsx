@@ -1,15 +1,12 @@
-import React, { use, useRef, useState } from "react";
+import React, { use, useEffect, useRef, useState } from "react";
 import Header from "../../components/Header/Header";
 import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../../components/context/AuthProvider";
-import { FaEye } from "react-icons/fa";
-import { FaEyeSlash } from "react-icons/fa6";
 import { toast } from "react-toastify";
 const Login = () => {
-  const { logIn, google ,user ,forgetPassword} = use(AuthContext);
-  const [show, setShow] = useState(false);
-  const location = useLocation()
-  const navigate = useNavigate()
+  const { logIn, google, forgetPassword } = use(AuthContext);
+  const location = useLocation();
+  const navigate = useNavigate();
   const emailRef = useRef();
   const handleLogin = (e) => {
     e.preventDefault();
@@ -17,36 +14,34 @@ const Login = () => {
     const password = e.target.password.value;
     logIn(email, password)
       .then((result) => {
-        const user = result.user
-        toast.success('Successfully logged in')
-        navigate(`${location.state ? location.state : '/'}`)
+        const user = result.user;
+        toast.success("Successfully logged in");
+        navigate(`${location.state ? location.state : "/"}`);
       })
       .then(() => {});
   };
   const forget = (e) => {
-  // const email = e.target.parentElement.parentElement.childElement
-  
-  const email = emailRef.current.value;
+    const email = emailRef.current.value;
     forgetPassword(email)
-    .then(() => {
-      toast.success('Check your email')
-    })
-    .catch((error) => {
-      const errorCode = error.code;
-      const errorMessage = error.message;
-    });
-  }
+      .then(() => {
+        toast.success("Check your email");
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+      });
+  };
   const handleGoogle = () => {
     google()
       .then((result) => {
-        navigate(`${location.state ? location.state : '/'}`)
-        toast.success('Successfully logged in')
+        navigate(`${location.state ? location.state : "/"}`);
+        toast.success("Successfully logged in");
       })
       .then(() => {});
   };
-  const handleWatch = () => {
-    setShow(!show);
-  };
+  useEffect(() => {
+    document.title = 'Login - Page'
+  } , [])
   return (
     <div className="max-w-[1600px] mx-auto">
       <Header></Header>
@@ -60,31 +55,26 @@ const Login = () => {
             <input
               type="email"
               name="email"
-              className="input w-full"
+              className="input w-full mb-2"
               placeholder="Email"
               ref={emailRef}
             />
             <label className="label text-[14px] font-medium mb-1">
               Password
             </label>
-            <div className="relative">
+            <div className="">
               <input
-                type={!show ? "password" : "text"}
+                type="password"
                 pattern="^(?=.*[a-z])(?=.*[A-Z]).{6,}$"
                 name="password"
                 className="input w-full "
                 placeholder="Password"
               />
-              <button onClick={handleWatch} className="cursor-pointer">
-                {show ? (
-                  <FaEyeSlash size={20} className="absolute right-4 top-2.5" />
-                ) : (
-                  <FaEye size={20} className="absolute right-4 top-2.5" />
-                )}
-              </button>
             </div>
             <div className="mt-2">
-              <a onClick={forget} className="link link-hover ">Forgot password?</a>
+              <a onClick={forget} className="link link-hover ">
+                Forgot password?
+              </a>
             </div>
             <button className="btn btn-neutral mt-4 w-full">Login</button>
             <p className="text-center text-[14px] mt-2 font-medium">

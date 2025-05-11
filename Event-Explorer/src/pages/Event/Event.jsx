@@ -14,12 +14,12 @@ const Event = ({ event }) => {
     description,
   } = event;
   useEffect(() => {
-    AOS.init({ duration: 700, delay: 50 , once : true});
+    AOS.init({ duration: 600, once : true});
   }, []);
   return (
     <div
       data-aos="fade-down-right"
-      data-aos-delay={id * 300}
+      data-aos-delay={id * 250}
       className="relative max-w-md mx-auto bg-black/40  rounded-3xl overflow-hidden shadow-2xl backdrop-blur-xl group transition duration-500  hover:shadow-blue-800"
     >
       <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-blue-600/20 via-transparent to-pink-500/20 blur-md group-hover:blur-xl transition-all duration-700"></div>
@@ -31,7 +31,7 @@ const Event = ({ event }) => {
           className="w-full h-56 object-cover rounded-t-3xl"
         />
 
-        <div className="absolute top-4 left-4 bg-blue-600/80 text-white text-xs font-semibold px-3 py-1 rounded-full animate-pulse shadow-lg backdrop-blur-sm">
+        <div className="absolute top-4 left-4 bg-blue-600/80 text-white text-sm font-semibold px-3 py-1 rounded-full animate-pulse shadow-lg backdrop-blur-sm">
           {category}
         </div>
 
@@ -60,7 +60,7 @@ const Event = ({ event }) => {
           <div>
             {description.length > 30 ? (
               <p className="text-white">
-                {description.slice(0, 100)}
+                {description.slice(0, 110)}
                 <span className="">
                   ...
                 </span>

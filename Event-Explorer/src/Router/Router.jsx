@@ -6,10 +6,13 @@ import Login from "../pages/Login/Login";
 import Register from "../pages/register/Register";
 import Details from "../pages/Details/Details";
 import PrivateRoute from "../components/context/PrivateRoute";
+import Error from "../pages/Error/Error";
+import HostEvent from "../pages/Host-events/HostEvent";
 export const router = createBrowserRouter([
   {
     path: "/",
     Component: Root,
+    errorElement: <Error></Error>,
     children: [
       {
         index: true,
@@ -24,6 +27,14 @@ export const router = createBrowserRouter([
         element: (
           <PrivateRoute>
             <Profile></Profile>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/host",
+        element: (
+          <PrivateRoute>
+            <HostEvent></HostEvent>
           </PrivateRoute>
         ),
       },
