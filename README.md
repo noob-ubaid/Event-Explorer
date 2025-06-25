@@ -5,7 +5,6 @@
 ## 🔗 Live Website
 
 👉 [Visit Event Explorer](https://event-finder-by-ubaid.netlify.app/)  
-*(Replace with your actual deployed link)*
 
 ---
 
